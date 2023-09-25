@@ -22,14 +22,16 @@ namespace ORM_Dapper
             return _conn.Query<Department>("SELECT * FROM departments");
         }
 
+        public IEnumerable<Product> GetAllProducts()
+        {
+            throw new NotImplementedException();
+        }
+
         public void InsertDepartments(string name)
         {
             _conn.Execute("INSERT INTO departments (Name) VALUES (@Name)", new {name = name});
         }
 
-        IQueryable<Department> IDepartmentRepository.GetAllDepartments()
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

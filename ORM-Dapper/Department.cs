@@ -10,9 +10,15 @@ namespace ORM_Dapper
     {
         public int DepartmentId { get; set; }
 
+
         public string Name { get; set; }
 
         public IQueryable<Department> GetAllDepartments()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Product> GetAllProducts()
         {
             throw new NotImplementedException();
         }
